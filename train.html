@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Registration</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+        margin: 40px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="time"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #Schedule {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<body>
+    <form>
+        <label for="tname">TrainName:</lable><br>
+        <input type="text" id="tname" name="tname"><br>
+        <label for="atime">ArrivalTime:</label><br>
+        <input type="time" id="atime" name="atime"><br>
+        <label for="dtime">DepartureTime:</label><br>
+        <input type="time" id="dtime" name="dtime"><br>
+        <button type="button" onclick="add()">Add</button>
+    </form>
+    <div id="Schedule"></div>
+    <script src="train.js"></script>
+</body>
+</html>
